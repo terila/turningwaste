@@ -11,11 +11,11 @@ Usuarios ubicados en los dos extremos:
 **Objetivo:** Lucía entra a la web para aprender nuevas formas de integrar biomateriales en su producción, buscando prácticas innovadoras y accesibles.
 **Comportamiento en la web:** Explora con curiosidad todos los recursos y busca directamente en el blog y los tutoriales de fabricación para experimentar con los biomateriales en sus productos.
 
-**Nombre:** Rodrigo
-**Edad:** 52 años
-**Motivaciones:** Enfocado en eficiencia y economía en su negocio
-**Frustraciones:** Le molesta la "excesiva presión" para adoptar prácticas ecológicas en la empresa
-**Objetivo:** Rodrigo entra en la web por curiosidad tras una recomendación de un conocido, aunque duda que las soluciones presentadas sean factibles a gran escala o rentables para empresas como la suya.
+**Nombre:** Rodrigo  
+**Edad:** 52 años  
+**Motivaciones:** Enfocado en eficiencia y economía en su negocio  
+**Frustraciones:** Le molesta la "excesiva presión" para adoptar prácticas ecológicas en la empresa  
+**Objetivo:** Rodrigo entra en la web por curiosidad tras una recomendación de un conocido, aunque duda que las soluciones presentadas sean factibles a gran escala o rentables para empresas como la suya.  
 **Comportamiento en la web:** Escanea rápidamente en busca de datos sólidos sobre beneficios económicos; es poco probable que profundice si no encuentra beneficios claros y directos para su industria.
 
 Usuario Promedio:  
