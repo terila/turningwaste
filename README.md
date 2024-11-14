@@ -27,7 +27,8 @@ Usuario Promedio:
 **Comportamiento en la Plataforma:**  
 Marta tiende a explorar secciones como recetas de aprovechamiento, consejos de almacenamiento y productos sostenibles. Participa de forma esporádica en actividades de concientización y busca formas prácticas de aplicar lo aprendido en su vida cotidiana.
 
-**Antecedentes:**
+**Antecedentes:**  
+
 **1.Too Good To Go:**  
       **Positivo:** Ayuda a rescatar comida que de otro modo se desecharía, beneficiando tanto al medio ambiente como a la economía y los usuarios pueden comprar alimentos a precios reducidos, lo que hace accesible comida de calidad por menos.  
       **Negativo:** Las ofertas dependen de los excedentes, por lo que no siempre hay opciones cercanas para todos los usuarios y al comprar porciones grandes o alimentos no planificados, algunos usuarios pueden terminar desperdiciando en casa.  
