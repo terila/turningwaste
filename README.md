@@ -4,12 +4,12 @@ Con esta página busco concientizar del problema del desperdicio de los alimento
 
 Usuarios ubicados en los dos extremos:
 
-**Nombre:** Lucía
-**Edad:** 23 años
-**Motivaciones:** Crear un impacto ambiental positivo, explorar materiales innovadores
-**Frustraciones:** Siente que la industria sigue limitada en la adopción de prácticas sostenibles; quiere más recursos para innovar
-**Objetivo:** Lucía entra a la web para aprender nuevas formas de integrar biomateriales en su producción, buscando prácticas innovadoras y accesibles.
-**Comportamiento en la web:** Explora con curiosidad todos los recursos y busca directamente en el blog y los tutoriales de fabricación para experimentar con los biomateriales en sus productos.
+**Nombre:** Lucía  
+**Edad:** 23 años  
+**Motivaciones:** Crear un impacto ambiental positivo, explorar materiales innovadores  
+**Frustraciones:** Siente que la industria sigue limitada en la adopción de prácticas sostenibles; quiere más recursos para innovar  
+**Objetivo:** Lucía entra a la web para aprender nuevas formas de integrar biomateriales en su producción, buscando prácticas innovadoras y accesibles.  
+**Comportamiento en la web:** Explora con curiosidad todos los recursos y busca directamente en el blog y los tutoriales de fabricación para experimentar con los biomateriales en sus productos.  
 
 **Nombre:** Rodrigo  
 **Edad:** 52 años  
