@@ -58,7 +58,11 @@ nav ul li a:hover {
     text-align: center;
     background-color: #efe4cb;
 }
-
+.highlight {
+    color: #9AA080;
+    font-size: 1.1em;
+    font-weight: bold;
+}
 .gallery {
     padding: 2rem;
 }
