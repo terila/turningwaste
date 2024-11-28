@@ -54,7 +54,7 @@ nav ul li a:hover {
 }
 
 .intro {
-    padding: 1rem 5rem;
+    padding: 1rem 7rem;
     text-align: center;
     background-color: #efe4cb;
 }
@@ -63,23 +63,84 @@ nav ul li a:hover {
     font-size: 1.1em;
     font-weight: bold;
 }
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 2rem auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+button:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
 .benefits {
-    background-color: #9AA080;
-    color: #EDEFE6;
-    padding: 2rem;
-    text-align: center;
+    padding: 5rem 20rem;
+    text-align: left;
+}
+.benefits-box {
+    background-color: #EBEBEB;
+    border: 2px solid #9AA080;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto; 
+    max-width: 800px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .benefits ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
 }
 
 .benefits li {
-    margin: 10px 0;
-    font-size: 1.1em;
+    margin-bottom: 15px;
+    line-height: 1.6;
 }
 
+.benefits strong {
+    font-weight: bolder;
+    font-size: 1.2em; 
+}
 
 .gallery {
     padding: 2rem;
@@ -105,8 +166,8 @@ nav ul li a:hover {
 }
 
 .card:hover {
-    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el cursor */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Añade una sombra más intensa */
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .card img {
@@ -133,7 +194,7 @@ nav ul li a:hover {
 
 .button:hover {
     background-color: #858C69;
-    transform: scale(1.05); /* Efecto de agrandamiento al pasar el cursor */
+    transform: scale(1.05);
 }
 
 
