@@ -50,16 +50,74 @@
     <main>
         <section id="mision" class="intro">
             <h2>Nuestra Misión</h2>
-            <p>En <strong><span class="highlight">TurningWaste</span></strong>, transformamos residuos de alimentos en biomateriales sostenibles. Reducimos el desperdicio y creamos soluciones innovadoras para un futuro más verde. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor at lectus eu iaculis. Integer lacinia nulla eu nulla rhoncus finibus. Vestibulum auctor faucibus lorem nec pharetra. Aenean non quam ut ante finibus hendrerit. Cras vel odio non purus maximus vestibulum non nec massa. Fusce orci metus, porttitor id porta sed, eleifend a odio. Aenean tincidunt odio in nisi sollicitudin, at ullamcorper nisi gravida. Vivamus vulputate et diam et euismod. Donec venenatis velit ex. Morbi porta auctor auctor. Morbi rutrum lorem non mi facilisis volutpat.
-Nulla elementum purus eget sodales bibendum. Sed mollis enim at ligula dictum, ac congue elit accumsan. Sed molestie imperdiet consectetur. Integer iaculis enim sed felis molestie, a ornare odio tincidunt. Suspendisse vitae dolor a neque feugiat tempus. Morbi blandit urna ut nibh efficitur bibendum. Aliquam ut risus non sem aliquet commodo mattis ut lectus. </p>
+            <p>En <strong><span class="highlight">TurningWaste</span></strong>, estamos comprometidos con transformar la crisis del desperdicio de alimentos en una oportunidad para la sostenibilidad. Cada año, millones de toneladas de residuos alimenticios contribuyen al cambio climático, emiten gases de efecto invernadero y agotan recursos naturales valiosos. Nuestra misión es combatir este daño ambiental al convertir esos residuos en biomateriales sostenibles, innovadores y de alta calidad.
+
+A través de nuestra labor, no solo reducimos el impacto negativo en el medio ambiente, sino que también fomentamos un cambio cultural hacia la responsabilidad ecológica. En TurningWaste, creemos en un futuro donde los residuos se convierten en recursos y donde cada acción cuenta para salvar el planeta. Trabajamos para construir un mundo más verde, equitativo y consciente para las generaciones presentes y futuras.</p>
         </section>
+        <section id="carrusel" class="carousel-container">
+    <div class="carousel">
+        <div class="slide">
+            <img src="desperdicios1.png" alt="Imagen 1">
+        </div>
+        <div class="slide">
+            <img src="desperdicios2.png" alt="Imagen 2">
+        </div>
+        <div class="slide">
+            <img src="desperdicios3.png" alt="Imagen 3">
+        </div>
+        <div class="slide">
+            <img src="desperdicios4.png" alt="Imagen 4">
+        </div>
+        <div class="slide">
+            <img src="desperdicios5.png" alt="Imagen 5">
+        </div>
+    </div>
+    <button class="prev">❮</button>
+    <button class="next">❯</button>
+</section>
+<script>
+    const carousel = document.querySelector('.carousel');
+    const slides = document.querySelectorAll('.slide');
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+
+    let currentIndex = 0;
+
+    function updateCarousel() {
+        const offset = -currentIndex * 100; 
+        carousel.style.transform = `translateX(${offset}%)`;
+    }
+
+    prevButton.addEventListener('click', () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1;
+        updateCarousel();
+    });
+
+    nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
+        updateCarousel();
+    });
+
+    // Cambio automático cada 5 segundos
+    setInterval(() => {
+        currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
+        updateCarousel();
+    }, 5000);
+</script>
+
         <section id="beneficios" class="benefits">
+        	<div class="benefits-box">
     <h2>Beneficios Ambientales</h2>
     <ul>
-        <li>Reducción significativa de residuos de alimentos.</li>
-        <li>Disminución de la huella de carbono.</li>
-        <li>Creación de materiales sostenibles para diversos sectores.</li>
+        <li><strong>1.Reducción de emisiones de gases de efecto invernadero:</strong>
+Convertir residuos alimenticios en biomateriales evita que estos desechos se descompongan en vertederos, reduciendo significativamente las emisiones de metano, un gas responsable del calentamiento global.</li>
+<li><strong>2.Innovación para una economía circular:</strong> Crear biomateriales a partir de desechos fomenta un modelo en el que los recursos son reaprovechados constantemente, minimizando el impacto ambiental de la producción industrial.</li>
+        <li><strong>3.Producción de materiales ecológicos:</strong>
+Los biomateriales creados a partir de residuos son biodegradables y reducen la necesidad de usar plásticos y otros materiales contaminantes que tardan siglos en descomponerse.</li>
+        <li><strong>4.Disminución de la contaminación por plásticos:</strong> Los biomateriales representan una alternativa sostenible a los plásticos convencionales, contribuyendo a la reducción de la contaminación en océanos, suelos y ecosistemas.</li>
+        <li><strong>5.Reducción del consumo de recursos no renovables:</strong> Los biomateriales elaborados con residuos orgánicos disminuyen la dependencia de materiales derivados del petróleo, ayudando a conservar combustibles fósiles y reducir su impacto ambiental.</li>
     </ul>
+</div>
 </section>
 
         <section id="galeria" class="gallery">
