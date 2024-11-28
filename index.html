@@ -32,126 +32,139 @@
         <title>Turning waste</title>
     </head>
     <body>
-
         <header class="main-header">
-        <div class="logo">
-            <img src="logo.png" alt="Logo TurningWaste">
-            <h1>TurningWaste</h1>
-        </div>
-        <nav class="navbar">
-            <ul class="nav-links">
-                <li><a href="#mision">Misión</a></li>
-                <li><a href="#beneficios">Beneficios</a></li>
-                <li><a href="#galeria">Galería</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-            <button class="menu-toggle">☰</button>
-        </nav>
-        <script>
-    // Toggle del menú en móviles
-    document.querySelector('.menu-toggle').addEventListener('click', function () {
-        document.querySelector('.navbar').classList.toggle('active');
-    });
-</script>
-    </header>
-    <main>
-        <section id="mision" class="intro">
-            <h2>Nuestra Misión</h2>
-            <p>En <strong><span class="highlight">TurningWaste</span></strong>, estamos comprometidos con transformar la crisis del desperdicio de alimentos en una oportunidad para la sostenibilidad. Cada año, millones de toneladas de residuos alimenticios contribuyen al cambio climático, emiten gases de efecto invernadero y agotan recursos naturales valiosos. Nuestra misión es combatir este daño ambiental al convertir esos residuos en biomateriales sostenibles, innovadores y de alta calidad.
+            <div class="logo">
+                <img src="logo.png" alt="Logo TurningWaste" />
+                <h1>TurningWaste</h1>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="#mision">Misión</a></li>
+                    <li><a href="#beneficios">Beneficios</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+                <button class="menu-toggle">☰</button>
+            </nav>
+        </header>
+        <main>
+            <section id="mision" class="intro">
+                <h2>Nuestra Misión</h2>
+                <p>
+                    En <strong><span class="highlight">TurningWaste</span></strong>, estamos comprometidos con transformar la crisis del desperdicio de alimentos en una oportunidad para la sostenibilidad. Cada año, millones de toneladas de
+                    residuos alimenticios contribuyen al cambio climático, emiten gases de efecto invernadero y agotan recursos naturales valiosos. Nuestra misión es combatir este daño ambiental al convertir esos residuos en biomateriales
+                    sostenibles, innovadores y de alta calidad. A través de nuestra labor, no solo reducimos el impacto negativo en el medio ambiente, sino que también fomentamos un cambio cultural hacia la responsabilidad ecológica. En
+                    TurningWaste, creemos en un futuro donde los residuos se convierten en recursos y donde cada acción cuenta para salvar el planeta. Trabajamos para construir un mundo más verde, equitativo y consciente para las
+                    generaciones presentes y futuras.
+                </p>
+            </section>
+            <section id="carrusel" class="carousel-container">
+                <div class="carousel">
+                    <div class="slide">
+                        <img src="desperdicios1.png" alt="Imagen 1" />
+                    </div>
+                    <div class="slide">
+                        <img src="desperdicios2.png" alt="Imagen 2" />
+                    </div>
+                    <div class="slide">
+                        <img src="desperdicios3.png" alt="Imagen 3" />
+                    </div>
+                    <div class="slide">
+                        <img src="desperdicios4.png" alt="Imagen 4" />
+                    </div>
+                    <div class="slide">
+                        <img src="desperdicios5.png" alt="Imagen 5" />
+                    </div>
+                </div>
+                <button class="prev">❮</button>
+                <button class="next">❯</button>
+            </section>
+            <script>
+                const carousel = document.querySelector(".carousel");
+                const slides = document.querySelectorAll(".slide");
+                const prevButton = document.querySelector(".prev");
+                const nextButton = document.querySelector(".next");
 
-A través de nuestra labor, no solo reducimos el impacto negativo en el medio ambiente, sino que también fomentamos un cambio cultural hacia la responsabilidad ecológica. En TurningWaste, creemos en un futuro donde los residuos se convierten en recursos y donde cada acción cuenta para salvar el planeta. Trabajamos para construir un mundo más verde, equitativo y consciente para las generaciones presentes y futuras.</p>
-        </section>
-        <section id="carrusel" class="carousel-container">
-    <div class="carousel">
-        <div class="slide">
-            <img src="desperdicios1.png" alt="Imagen 1">
-        </div>
-        <div class="slide">
-            <img src="desperdicios2.png" alt="Imagen 2">
-        </div>
-        <div class="slide">
-            <img src="desperdicios3.png" alt="Imagen 3">
-        </div>
-        <div class="slide">
-            <img src="desperdicios4.png" alt="Imagen 4">
-        </div>
-        <div class="slide">
-            <img src="desperdicios5.png" alt="Imagen 5">
-        </div>
-    </div>
-    <button class="prev">❮</button>
-    <button class="next">❯</button>
-</section>
-<script>
-    const carousel = document.querySelector('.carousel');
-    const slides = document.querySelectorAll('.slide');
-    const prevButton = document.querySelector('.prev');
-    const nextButton = document.querySelector('.next');
+                let currentIndex = 0;
 
-    let currentIndex = 0;
+                function updateCarousel() {
+                    const offset = -currentIndex * 100;
+                    carousel.style.transform = `translateX(${offset}%)`;
+                }
 
-    function updateCarousel() {
-        const offset = -currentIndex * 100; 
-        carousel.style.transform = `translateX(${offset}%)`;
-    }
+                prevButton.addEventListener("click", () => {
+                    currentIndex = currentIndex > 0 ? currentIndex - 1 : slides.length - 1;
+                    updateCarousel();
+                });
 
-    prevButton.addEventListener('click', () => {
-        currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1;
-        updateCarousel();
-    });
+                nextButton.addEventListener("click", () => {
+                    currentIndex = currentIndex < slides.length - 1 ? currentIndex + 1 : 0;
+                    updateCarousel();
+                });
+              
+                setInterval(() => {
+                    currentIndex = currentIndex < slides.length - 1 ? currentIndex + 1 : 0;
+                    updateCarousel();
+                }, 5000);
+            </script>
 
-    nextButton.addEventListener('click', () => {
-        currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
-        updateCarousel();
-    });
+            <section id="beneficios" class="benefits">
+                <div class="benefits-box">
+                    <h2>Beneficios Ambientales</h2>
+                    <ul>
+                        <li>
+                            <strong>1.Reducción de emisiones de gases de efecto invernadero:</strong> Convertir residuos alimenticios en biomateriales evita que estos desechos se descompongan en vertederos, reduciendo significativamente las
+                            emisiones de metano, un gas responsable del calentamiento global.
+                        </li>
+                        <li>
+                            <strong>2.Innovación para una economía circular:</strong> Crear biomateriales a partir de desechos fomenta un modelo en el que los recursos son reaprovechados constantemente, minimizando el impacto ambiental de
+                            la producción industrial.
+                        </li>
+                        <li>
+                            <strong>3.Producción de materiales ecológicos:</strong> Los biomateriales creados a partir de residuos son biodegradables y reducen la necesidad de usar plásticos y otros materiales contaminantes que tardan
+                            siglos en descomponerse.
+                        </li>
+                        <li>
+                            <strong>4.Disminución de la contaminación por plásticos:</strong> Los biomateriales representan una alternativa sostenible a los plásticos convencionales, contribuyendo a la reducción de la contaminación en
+                            océanos, suelos y ecosistemas.
+                        </li>
+                        <li>
+                            <strong>5.Reducción del consumo de recursos no renovables:</strong> Los biomateriales elaborados con residuos orgánicos disminuyen la dependencia de materiales derivados del petróleo, ayudando a conservar
+                            combustibles fósiles y reducir su impacto ambiental.
+                        </li>
+                    </ul>
+                </div>
+            </section>
 
-    // Cambio automático cada 5 segundos
-    setInterval(() => {
-        currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
-        updateCarousel();
-    }, 5000);
-</script>
-
-        <section id="beneficios" class="benefits">
-        	<div class="benefits-box">
-    <h2>Beneficios Ambientales</h2>
-    <ul>
-        <li><strong>1.Reducción de emisiones de gases de efecto invernadero:</strong>
-Convertir residuos alimenticios en biomateriales evita que estos desechos se descompongan en vertederos, reduciendo significativamente las emisiones de metano, un gas responsable del calentamiento global.</li>
-<li><strong>2.Innovación para una economía circular:</strong> Crear biomateriales a partir de desechos fomenta un modelo en el que los recursos son reaprovechados constantemente, minimizando el impacto ambiental de la producción industrial.</li>
-        <li><strong>3.Producción de materiales ecológicos:</strong>
-Los biomateriales creados a partir de residuos son biodegradables y reducen la necesidad de usar plásticos y otros materiales contaminantes que tardan siglos en descomponerse.</li>
-        <li><strong>4.Disminución de la contaminación por plásticos:</strong> Los biomateriales representan una alternativa sostenible a los plásticos convencionales, contribuyendo a la reducción de la contaminación en océanos, suelos y ecosistemas.</li>
-        <li><strong>5.Reducción del consumo de recursos no renovables:</strong> Los biomateriales elaborados con residuos orgánicos disminuyen la dependencia de materiales derivados del petróleo, ayudando a conservar combustibles fósiles y reducir su impacto ambiental.</li>
-    </ul>
-</div>
-</section>
-
-        <section id="galeria" class="gallery">
-    <h2>Galería de Biomateriales</h2>
-    <div class="grid">
-        <a href="https://commons.materiom.org/materials-database/recipe/649c36218e0f06dcab0b7d2a" class="card">
-            <img src="biomaterial1.png" alt="Biomaterial 1">
-            <p>Cáscara de naranja quemada | Biomaterial de gelatina</p>
-        </a>
-        <a href="https://commons.materiom.org/materials-database/recipe/649c36238e0f06dcab0b7d76" class="card">
-            <img src="biomaterial2.png" alt="Biomaterial 2">
-            <p>Biomaterial de granada</p>
-        </a>
-        <a href="https://commons.materiom.org/materials-database/recipe/649c36218e0f06dcab0b7d14" class="card">
-            <img src="biomaterial3.png" alt="Biomaterial 3">
-            <p>Natural dye - Purple Cabbage</p>
-        </a>
-    </div>
-    <div class="view-more">
-        <a href="https://materiom.org/search" class="button">Ver más biomateriales</a>
-    </div>
-</section>
-
-    </main>
-    <footer id="contacto">
-        <p>Contacto: <a href="mailto:teresita.ilabaca@uc.cl">teresita.ilabaca@uc.cl</a></p>
-        <p>© 2024 TurningWaste. Todos los derechos reservados.</p>
-    </footer>
+            <section id="galeria" class="gallery">
+                <h2>Galería de Biomateriales</h2>
+                <div class="grid">
+                    <a href="https://commons.materiom.org/materials-database/recipe/649c36218e0f06dcab0b7d2a" class="card">
+                        <img src="biomaterial1.png" alt="Biomaterial 1" />
+                        <p>Cáscara de naranja quemada | Biomaterial de gelatina</p>
+                    </a>
+                    <a href="https://commons.materiom.org/materials-database/recipe/649c36238e0f06dcab0b7d76" class="card">
+                        <img src="biomaterial2.png" alt="Biomaterial 2" />
+                        <p>Biomaterial de granada</p>
+                    </a>
+                    <a href="https://commons.materiom.org/materials-database/recipe/649c36218e0f06dcab0b7d14" class="card">
+                        <img src="biomaterial3.png" alt="Biomaterial 3" />
+                        <p>Natural dye - Purple Cabbage</p>
+                    </a>
+                </div>
+                <div class="view-more">
+                    <a href="https://materiom.org/search" class="button">Ver más biomateriales</a>
+                </div>
+            </section>
+            <script>
+                document.querySelector(".menu-toggle").addEventListener("click", function () {
+                    document.querySelector(".navbar").classList.toggle("active");
+                });
+            </script>
+        </main>
+        <footer id="contacto">
+            <p>Contacto: <a href="mailto:teresita.ilabaca@uc.cl">teresita.ilabaca@uc.cl</a></p>
+            <p>© 2024 TurningWaste. Todos los derechos reservados.</p>
+        </footer>
     </body>
 </html>
