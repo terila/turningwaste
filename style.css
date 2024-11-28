@@ -54,7 +54,7 @@ nav ul li a:hover {
 }
 
 .intro {
-    padding: 1rem;
+    padding: 1rem 5rem;
     text-align: center;
     background-color: #efe4cb;
 }
@@ -63,6 +63,24 @@ nav ul li a:hover {
     font-size: 1.1em;
     font-weight: bold;
 }
+.benefits {
+    background-color: #9AA080;
+    color: #EDEFE6;
+    padding: 2rem;
+    text-align: center;
+}
+
+.benefits ul {
+    list-style: none;
+    padding: 0;
+}
+
+.benefits li {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+
 .gallery {
     padding: 2rem;
 }
@@ -74,12 +92,21 @@ nav ul li a:hover {
 }
 
 .card {
-    background: white;
+    background: #EBEBEB;
     border: 1px solid #ddd;
     border-radius: 8px;
     text-align: center;
     padding: 1rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: block;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el cursor */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Añade una sombra más intensa */
 }
 
 .card img {
@@ -88,6 +115,27 @@ nav ul li a:hover {
     padding-bottom: 1rem;
     margin-bottom: 1rem;
 }
+.view-more {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #9AA080;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: #858C69;
+    transform: scale(1.05); /* Efecto de agrandamiento al pasar el cursor */
+}
+
 
 footer {
     background-color: #333;
@@ -103,4 +151,5 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
-} 
+}
+
