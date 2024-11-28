@@ -38,14 +38,21 @@
             <img src="logo.png" alt="Logo TurningWaste">
             <h1>TurningWaste</h1>
         </div>
-        <nav>
-            <ul>
+        <nav class="navbar">
+            <ul class="nav-links">
                 <li><a href="#mision">Misión</a></li>
                 <li><a href="#beneficios">Beneficios</a></li>
                 <li><a href="#galeria">Galería</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
+            <button class="menu-toggle">☰</button>
         </nav>
+        <script>
+    // Toggle del menú en móviles
+    document.querySelector('.menu-toggle').addEventListener('click', function () {
+        document.querySelector('.navbar').classList.toggle('active');
+    });
+</script>
     </header>
     <main>
         <section id="mision" class="intro">
