@@ -83,6 +83,7 @@ nav ul li a:hover {
     margin: 0;
 }
 
+
 .nav-links a:hover {
     text-decoration: underline;
 }
@@ -117,6 +118,7 @@ nav ul li a:hover {
 
     .menu-toggle {
         display: block;
+
     }
 
     .navbar.active .nav-links {
