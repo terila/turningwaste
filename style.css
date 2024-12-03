@@ -265,10 +265,41 @@ button:hover {
 }
 
 .card img {
-    width: 100%;
+    width: 500px;
+    height: 400px;
     border-bottom: 1px solid #ddd;
     padding-bottom: 1rem;
     margin-bottom: 1rem;
+}
+
+.swiper-container {
+    width: 500;
+    height: 500px;
+    padding: 20px 0;
+    position: relative;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-button-prev,
+.swiper-button-next {
+    color: black;
+    width: 40px; 
+    height: 40px;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 18px;
+}
+.swiper-button-prev {
+    left: -20px; 
+}
+
+.swiper-button-next {
+    right: -20px; 
 }
 .view-more {
     text-align: center;
@@ -290,7 +321,6 @@ button:hover {
     background-color: #858c69;
     transform: scale(1.05);
 }
-
 footer {
     background-color: #333;
     color: white;
